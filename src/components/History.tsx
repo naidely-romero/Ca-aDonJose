@@ -1,48 +1,19 @@
 import React from "react";
 import { motion } from "motion/react";
-import { EditableImage } from "./EditableImage";
-import historyImg from "../assets/images/regenerated_image_1779295956815.jpg";
 
 export function History() {
   return (
     <section id="historia" className="py-24 bg-brand-cream text-white overflow-hidden border-t border-b border-light">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="flex flex-col items-center">
           
-          {/* Left Column (Image) */}
+          {/* Centered Text Column */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="aspect-[4/5] overflow-hidden shadow-2xl rounded-sm">
-              <EditableImage
-                id="history"
-                defaultSrc={historyImg}
-                alt="Proceso Artesanal"
-                className="w-full h-full"
-                imgClassName="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-brown border border-white/10 p-8 hidden md:flex flex-col justify-end text-white shadow-2xl rounded-sm">
-              <span className="text-4xl font-display mb-2 italic text-brand-gold">100%</span>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#71717a] font-accent font-semibold">
-                Natural de Veracruz
-              </span>
-              <div className="h-[1px] w-full bg-white/10 mt-4" />
-            </div>
-          </motion.div>
-
-          {/* Right Column (Text) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col justify-center"
+            className="flex flex-col items-center text-center max-w-3xl"
           >
             <h2 className="text-brand-gold text-xs uppercase tracking-[0.4em] mb-4 font-accent font-semibold">
               Nuestra Herencia
@@ -52,8 +23,8 @@ export function History() {
               <span className="italic text-brand-gold/80">Mahuixtlán</span>
             </h3>
             
-            <div className="space-y-6 font-accent text-xs md:text-sm text-white/75 font-light leading-relaxed text-justify">
-              <p className="italic font-normal border-l-2 border-brand-gold pl-4 mb-8 text-brand-gold/80 text-base">
+            <div className="space-y-6 font-accent text-xs md:text-sm text-white/75 font-light leading-relaxed text-justify md:text-center">
+              <p className="italic font-normal border-l-2 md:border-l-0 md:border-b border-brand-gold pl-4 md:pl-0 pb-4 mb-8 text-brand-gold/80 text-base inline-block">
                 "Caña Don José no es solo una marca; es el latido de un pueblo destilador."
               </p>
               <p>
@@ -67,7 +38,7 @@ export function History() {
               </p>
             </div>
 
-            <div className="mt-12 flex items-center space-x-12">
+            <div className="mt-12 flex items-center justify-center space-x-12">
               <div>
                 <span className="block text-2xl font-display text-brand-gold font-medium">Veracruz</span>
                 <span className="text-[9px] uppercase tracking-widest text-[#71717a] font-accent font-semibold">

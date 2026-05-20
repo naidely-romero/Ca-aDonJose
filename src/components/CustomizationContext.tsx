@@ -1,14 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import historyImg from "../assets/images/regenerated_image_1779295956815.jpg";
-import map1Img from "../assets/images/regenerated_image_1779295957177.jpg";
-import map2Img from "../assets/images/regenerated_image_1779295957717.jpg";
 
 const DEFAULT_IMAGES = {
   logo: "https://images.unsplash.com/photo-1544022613-e87f17a784d2?q=80&w=200&auto=format&fit=crop",
-  hero: "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=1200&auto=format&fit=crop", // pristine sugarcane fields of Veracruz
-  history: historyImg, // old school/craft legacy jar
-  map1: map1Img, // map 1
-  map2: map2Img, // map 2
+  hero: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=1200&auto=format&fit=crop", // manual sugarcane harvest workers cutting cane stalks
 };
 
 interface CustomizationContextProps {
@@ -34,8 +28,12 @@ export function CustomizationProvider({ children }: { children: React.ReactNode 
             }
           }
         });
-        // Discard any persistent references to the old or cake images
-        if (parsed.hero && (parsed.hero.includes("1527061011665-3652c757a4d4") || parsed.hero.includes("1571115177098-24ec42ed204d"))) {
+        // Discard any persistent references to previous hero images
+        if (parsed.hero && (
+          parsed.hero.includes("1527061011665-3652c757a4d4") ||
+          parsed.hero.includes("1571115177098-24ec42ed204d") ||
+          parsed.hero.includes("1594026112284-02bb6f3352fe")
+        )) {
           delete parsed.hero;
         }
         return { ...DEFAULT_IMAGES, ...parsed };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import { EditableImage } from "./EditableImage";
 
 import prodImg0 from "../assets/images/regenerated_image_1779295954280.jpg";
 import prodImg1 from "../assets/images/regenerated_image_1779295954745.jpg";
@@ -116,12 +115,11 @@ export function Products() {
             >
               {/* Product Image Frame */}
               <div className="relative aspect-[3/4] mb-8 overflow-hidden bg-brand-brown/10 rounded-sm">
-                <EditableImage
-                  id={`product_${idx}`}
-                  defaultSrc={prod.image}
+                <img
+                  src={prod.image}
                   alt={prod.name}
-                  className="w-full h-full"
-                  imgClassName="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Tag */}

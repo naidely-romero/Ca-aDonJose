@@ -1,21 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
-import { EditableImage } from "./EditableImage";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-black">
-      <div className="absolute inset-0 z-0">
-        <EditableImage
-          id="hero"
-          defaultSrc="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=1200&auto=format&fit=crop"
-          alt="Caña Don José Hero"
-          className="w-full h-full"
-          imgClassName="w-full h-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-brand-black/20" />
-        <div className="absolute inset-0 bg-brand-blue/10 mix-blend-multiply" />
-      </div>
+    <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+      <div className="absolute inset-0 z-0 bg-black" />
       
       <div className="relative z-10 text-center px-6 max-w-5xl">
         <motion.div
