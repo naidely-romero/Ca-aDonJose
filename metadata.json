@@ -1,0 +1,6 @@
+{
+  "name": "Caña Don José",
+  "description": "Sitio web de la Destilería Caña Don José de Mahuixtlán, Veracruz, México. Artesanos de aguardiente, compuestos y toritos tradicionales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

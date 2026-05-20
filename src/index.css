@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-accent: "Montserrat", sans-serif;
+  --color-brand-black: #0a0a0a;
+  --color-brand-gold: #c4a67e;
+  --color-brand-muted: #71717a;
+  --color-brand-text: #f5f5f5;
+  --color-brand-brown: #161618;
+  --color-brand-cream: #0c0c0e;
+}
+
+body {
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+body ::selection {
+  background-color: var(--color-brand-gold);
+  color: var(--color-brand-black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.text-shadow-gold {
+  text-shadow: 0 0 10px rgba(196, 166, 126, 0.3);
+}
+
+.bg-glass {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+}
+
+.border-light {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.border-gold {
+  border-color: rgba(196, 166, 126, 0.3);
+}
+
+.gold-gradient {
+  background-image: linear-gradient(to right, var(--color-brand-gold), #e1cca7, var(--color-brand-gold));
+}
+
